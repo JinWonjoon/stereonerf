@@ -8,7 +8,7 @@
   <title>StereoNeRF</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async="" src="./Nerfies_ Deformable Neural Radiance Fields_files/js"></script>
+  <!-- <script async="" src="./Nerfies_ Deformable Neural Radiance Fields_files/js"></script> -->
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="./Nerfies_ Deformable Neural Radiance Fields_files/fontawesome.all.min.css">
   <link rel="stylesheet" href="./Nerfies_ Deformable Neural Radiance Fields_files/academicons.min.css">
   <link rel="stylesheet" href="./Nerfies_ Deformable Neural Radiance Fields_files/index.css">
-  <link rel="icon" href="https://nerfies.github.io/static/images/favicon.svg">
+  <!-- <link rel="icon" href="https://nerfies.github.io/static/images/favicon.svg"> -->
 
   <script src="./Nerfies_ Deformable Neural Radiance Fields_files/jquery.min.js.다운로드"></script>
   <script defer="" src="./Nerfies_ Deformable Neural Radiance Fields_files/fontawesome.all.min.js.다운로드"></script>
@@ -127,6 +127,11 @@
         <span class="dnerf">Stereonerf</span> takes multi-view stereo-camera images and synthesizes high-quality novel-view images.
       </h2>
     </div>
+    <div class="column content">
+      <picture>
+        <img src="./StereoNeRF_files/teaser.png" alt="photo">
+      </picture>
+    </div>
   </div>
 </section>
 
@@ -168,11 +173,25 @@
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
+      
+      <!-- Challenge. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">1. Challenge</h2>
+          <p>
+            Challenges in generalizable novel-view synthesis. Novel-view synthesis is a long-standing ill-posed problem. Feed-forward manner in generalizable view synthesis exacerbates the ill-posedness, leading to inaccurate geometry and low-quality rendering results.
+          </p>
+          <picture>
+            <img src="./StereoNeRF_files/challenge.png" alt="photo">
+          </picture>
+        </div>
+      </div>
+      <!--/ Challenge. -->
 
       <!-- Motivation. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Motivation</h2>
+          <h2 class="title is-3">2. Motivation</h2>
           <p>
             The superior performance of stereo estimation motivates us to integrate it into the generalizable novel-view synthesis framework.
             <i>Stereoscopic constraint</i> and <i>large-scale stereo dataset</i> have faciliated remarkable generalization capabilitis of the stereo estimation compared to learning-based MVS methods.
@@ -183,10 +202,13 @@
         </div>
       </div>
       <!--/ Motivation. -->
+    </div>
+    
 
+    <div class="columns is-centered">
       <!-- Comparison with a Baseline. -->
       <div class="column">
-        <h2 class="title is-3">Comparison with a Baseline</h2>
+        <h2 class="title is-3">3. Comparison with a Baseline</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
@@ -196,11 +218,29 @@
               <img src="./StereoNeRF_files/comparison_baseline.png" alt="photo">
             </picture>
           </div>
-
         </div>
       </div>
+      <!--/ Comparison with a Baseline. -->
+
+      <!-- Key method. -->
+      <div class="column">
+        <h2 class="title is-3">4. Key Method</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              Our key contribution is a novel framework, dubbed <i>StereoNeRF</i>, which integrates the stereo matching into a existing generalizable view synthesis approach.
+              To this end, we integrate stereo-correlated features from a pre-trained stereo estimation network into the stereo feature extractor.
+              <!-- Key method of our framework is a stereo feature extractor. The stereo feature extractor estimates stereo correspondence of input stereo-camera images using epipolar constraint.
+              Moreover, our stereo feature extractor aggregates stereo-correlated features from a pre-trained stereo estimation network into stereo correspondence estimation. -->
+            </p>
+            <picture>
+              <img src="./StereoNeRF_files/KeyMethod.png" alt="photo">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <!--/ Key method. -->
     </div>
-    <!--/ Comparison with a Baseline. -->
 
     <!-- Main comparison. -->
     <div class="columns is-centered">
@@ -278,17 +318,17 @@
 
 
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{lee2024generalizable,
+  author    = {Lee, Haechan and Jin, Wonjoon and Baek, Seung-Hwan and Cho, Sunghyun},
+  title     = {Generalizable Novel-View Synthesis using a Stereo Camera},
+  journal   = {CVPR},
+  year      = {2024},
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
@@ -299,12 +339,6 @@
           <p>
             This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
